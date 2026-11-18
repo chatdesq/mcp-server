@@ -1,0 +1,50 @@
+{
+  "name": "@chatdesq/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for ChatDesq, the WhatsApp Business API platform: contacts, templates, inbox, CRM deals and single WhatsApp messages from Claude, Cursor and other AI assistants.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "whatsapp",
+    "whatsapp-business-api",
+    "chatdesq",
+    "crm",
+    "india"
+  ],
+  "author": "Apporio Infolabs Pvt Ltd <hello@chatdesq.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "chatdesq-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://chatdesq.com",
+  "mcpName": "io.github.chatdesq/mcp-server",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatdesq/mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chatdesq/mcp-server/issues"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.chatdesq/mcp-server",
+  "title": "ChatDesq",
+  "description": "WhatsApp Business API for AI assistants: contacts, templates, inbox, CRM deals, single messages.",
+  "repository": {
+    "url": "https://github.com/chatdesq/mcp-server",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://chatdesq.com",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@chatdesq/mcp-server",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "CHATDESQ_API_KEY",
+          "description": "API key from ChatDesq > Settings > API keys",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "CHATDESQ_API_BASE",
+          "description": "Optional API base URL (default https://api.chatdesq.com/v1)",
+          "isRequired": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
