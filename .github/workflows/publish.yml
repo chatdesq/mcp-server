@@ -24,7 +24,7 @@ jobs:
       - name: Publish to npm (with provenance), unless this version is already there
         run: |
           V=$(node -p "require('./package.json').version")
-          if npm view "@chatdesq/mcp-server@$V" version >/dev/null 2>&1; then echo "npm already has $V, skipping"; else npm publish --provenance --access public; fi
+          if npm view "@chatdesq/mcp-server@$V" version >/dev/null 2>&1; then echo "npm already has $V, skipping"; else npm publish --provenance --access public 2>&1 | tee publish.log || grep -q "previously published" publish.log; fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # only for the first release; later npm trusted publishing (OIDC)
       - name: Publish to the MCP Registry
