@@ -21,7 +21,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm whoami
-          npm trust github @chatdesq/mcp-server --repo chatdesq/mcp-server --file publish.yml -y
-          npm trust github n8n-nodes-chatdesq --repo chatdesq/n8n-nodes-chatdesq --file publish.yml -y
+          npm trust github @chatdesq/mcp-server --repo chatdesq/mcp-server --file publish.yml --allow-publish -y
+          npm trust github n8n-nodes-chatdesq --repo chatdesq/n8n-nodes-chatdesq --file publish.yml --allow-publish -y
           npm trust list @chatdesq/mcp-server
           npm trust list n8n-nodes-chatdesq
